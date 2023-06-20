@@ -1,5 +1,5 @@
 import string
-import nltk
+import nltk_class
 from nltk.sentiment import SentimentIntensityAnalyzer
 from nltk.tokenize import TweetTokenizer
 from nltk.tokenize import sent_tokenize
@@ -15,7 +15,7 @@ from nltk.corpus import stopwords
 # nltk.download('omw-1.4')
 # nltk.download('averaged_perceptron_tagger')
 
-class Text_Mining():
+class text_Mining():
     def  __init__(self):
         self.text = None
         self.special_char = [",",".","<",'>',"/","?",":",";","\"","{","}","[","]","*","!","@","#","$","%","^","&","(",")","_","-","=","+"]
@@ -23,7 +23,7 @@ class Text_Mining():
         self.tokenized_sent = []
         self.filtered_words = []
         self.sentiment = {}
-        self.frequency = {}
+        self.frequency = []
 
     def set_text(self,text):
         self.text = text
